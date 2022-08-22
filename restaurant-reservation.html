@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/01aca4c489.js" crossorigin="anonymous"></script>
+
+  <title>Internship Assignment</title>
+
+  <link rel="stylesheet" href="rtaurant-reservation.css">
+  <script src="restaurant-reservation.js"></script>
+</head>
+
+<body>
+  <main>
+    <div class="header-container">
+      <img class="logo" src="images/logo.png" alt="OpenTable logo">
+      <div>
+        <h1>Where to dine next</h1>
+        <p>Keep the good meals rolling-from cuisine ro neighborhood,</p>
+        <p>vibe to price, these restaurants share a lot with places you've</p>
+        <p>enjoyed in the past.</p>
+        <button>See your recommendations</button>
+      </div>
+      <div id="myBtnContainer">
+        <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+        <button class="btn" onclick="filterSelection('nashville')"> Nashville</button>
+        <button class="btn" onclick="filterSelection('downtown')"> Downtown</button>
+        <button class="btn" onclick="filterSelection('the-gulch')"> The Gulch</button>
+        <button class="btn" onclick="filterSelection('germantown')"> Germantown</button>
+      </div>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" style="stop-color:rgb(0, 26, 255);stop-opacity:1" />
+        <stop offset="100%" style="stop-color:rgb(255,0,0);stop-opacity:1" />
+      </linearGradient>
+      <path fill="url(#grad)" fill-opacity="1" d="M0,64L80,80C160,96,320,128,480,138.7C640,149,800,139,960,128C1120,117,1280,107,1360,101.3L1440,96L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
+    </svg>
+
+    <div class="restaurant-container">
+      <div class="restaurant-grid filterDiv nashville">
+        <img class="restaurant-image" src="images/restaurant-1.png" alt="restaurant-1">
+        <div class="restaurant-info">
+          <p>Urban Grub</p>
+          <div>
+            <i class="fa-solid fa-location-dot"></i>
+            Nashville
+          </div>
+          <div class="restaurant-type">
+            <div>
+              <i class="fa-solid fa-money-bills"></i>
+              $$$
+            </div>
+            <div>&#8226;</div>
+            <div>
+              <i class="fa-solid fa-utensils"></i>
+              Southern
+            </div>
+          </div>
+          <a href="">Reserve &gt;</a>
+        </div>
+      </div>
+
+      <div class="restaurant-grid filterDiv downtown">
+        <img class="restaurant-image" src="images/restaurant-2.png" alt="restaurant-2">
+        <div class="restaurant-info">
+          <p>The Stillery</p>
+          <div>
+            <i class="fa-solid fa-location-dot"></i>
+            Downtown
+          </div>
+          <div class="restaurant-type">
+            <div>
+              <i class="fa-solid fa-money-bills"></i>
+              $$
+            </div>
+            <div>&#8226;</div>
+            <div>
+              <i class="fa-solid fa-utensils"></i>
+              Gastro Pub
+            </div>
+          </div>
+          <a href="">Reserve &gt;</a>
+        </div>
+      </div>
+
+      <div class="restaurant-grid filterDiv the-gulch">
+        <img class="restaurant-image" src="images/restaurant-3.png" alt="restaurant-3">
+        <div class="restaurant-info">
+          <p>Adele's</p>
+          <div>
+            <i class="fa-solid fa-location-dot"></i>
+            The Gulch
+          </div>
+          <div class="restaurant-type">
+            <div>
+              <i class="fa-solid fa-money-bills"></i>
+              $$$
+            </div>
+            <div>&#8226;</div>
+            <div>
+              <i class="fa-solid fa-utensils"></i>
+              American
+            </div>
+          </div>
+          <a href="">Reserve &gt;</a>
+        </div>
+      </div>
+
+      <div class="restaurant-grid filterDiv nashville">
+        <img class="restaurant-image" src="images/restaurant-4.png" alt="restaurant-4">
+        <div class="restaurant-info">
+          <p>Church and Union - Nashville</p>
+          <div>
+            <i class="fa-solid fa-location-dot"></i>
+            Nashville
+          </div>
+          <div class="restaurant-type">
+            <div>
+              <i class="fa-solid fa-money-bills"></i>
+              $$
+            </div>
+            <div>&#8226;</div>
+            <div>
+              <i class="fa-solid fa-utensils"></i>
+              American
+            </div>
+          </div>
+          <a href="">Reserve &gt;</a>
+        </div>
+      </div>
+
+      <div class="restaurant-grid filterDiv germantown">
+        <img class="restaurant-image" src="images/restaurant-5.png" alt="restaurant-5">
+        <div class="restaurant-info">
+          <p>The Optimist - Nashville</p>
+          <div>
+            <i class="fa-solid fa-location-dot"></i>
+            Germantown
+          </div>
+          <div class="restaurant-type">
+            <div>
+              <i class="fa-solid fa-money-bills"></i>
+              $$$
+            </div>
+            <div>&#8226;</div>
+            <div>
+              <i class="fa-solid fa-utensils"></i>
+              Seafood
+            </div>
+          </div>
+          <a href="">Reserve &gt;</a>
+        </div>
+      </div>
+
+      <div class="restaurant-grid filterDiv nashville">
+        <img class="restaurant-image" src="images/restaurant-6.png" alt="restaurant-6">
+        <div class="restaurant-info">
+          <p>Lola</p>
+          <div>
+            <i class="fa-solid fa-location-dot"></i>
+            Nashville
+          </div>
+          <div class="restaurant-type">
+            <div>
+              <i class="fa-solid fa-money-bills"></i>
+              $$
+            </div>
+            <div>&#8226;</div>
+            <div>
+              <i class="fa-solid fa-utensils"></i>
+              Spanish
+            </div>
+          </div>
+          <a href="">Reserve &gt;</a>
+        </div>
+      </div>
+      
+      <div class="records">
+        <h1>Find more of what you like, served up just for you.</h1>
+        <button>See all your recs</button>
+      </div>
+      <div class="download-app">
+        <p>Get personalized recommendations and discover the best dining</p>
+        <p>options for every mood, craving, and occasion-all woth a few taps.</p>
+        <p><a href="">Download the app &gt;</a></span></p>
+      </div>
+    </div>
+
+    <div class="download-link-container">
+      <div class="red-logo">
+        <img src="images/logo-red.png" alt="">
+        <p>Get our mobile app</p>
+      </div>
+      <img class="download-link" src="images/appstore-dowload.png" alt="download via appstore">
+      <img class="download-link" src="images/playstore-dowload.png" alt="download via google play store">
+    </div>
+
+    <div class="social-icons">
+      <i class="fa-brands fa-square-facebook"></i>
+      <i class="fa-brands fa-twitter"></i>
+      <i class="fa-brands fa-instagram"></i>
+    </div>
+    
+    <footer>
+      <p class="update-profile">Update your profile &#8226; Unsubscribe</p>
+      <p>1 Montgomery Street, Suite 700&#8226;San Francisco, CA&#8226;94704</p>
+      <p>www.opentable.com</p>
+      <div><i class="fa-solid fa-location-dot"></i> Nashville (Update)</div>
+      <p>Have a questions? Visit community.opentable.com.</p>
+      <p>Are you a restraurateur? See what OpenTable van do for you.</p>
+      <p>&#169; 2022 OpenTable,Inc. All rights reserved.</p>
+      <p>OpenTable and the OpenTablelogo are registered trademarks of OpenTable,Inc.</p>
+    </footer>
+  </main>
+</body>
+</html>
